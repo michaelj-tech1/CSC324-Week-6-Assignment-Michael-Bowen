@@ -25,8 +25,10 @@ public class ToDoListApp {
             System.out.println("1. Add Task");
             System.out.println("2. View Tasks");
             System.out.println("3. Remove Task");
-            System.out.println("4. Exit");
+            System.out.println("4. Search Tasks");
+            System.out.println("5. Exit");
             System.out.print("Enter choice: ");
+
 
             // Read user input (menu choice)
             choice = scanner.nextInt();
@@ -37,13 +39,15 @@ public class ToDoListApp {
                 case 1 -> addTask(scanner); // Call method to add a task
                 case 2 -> viewTasks(); // Call method to display tasks
                 case 3 -> removeTask(scanner); // Call method to remove a task
-                case 4 -> System.out.println("Exiting..."); // Exit message
+                case 4 -> searchTasks(scanner); // Call method to search for task
+                case 5 -> System.out.println("Exiting..."); // Exit message
                 default -> System.out.println("Invalid choice. Try again."); // Handle invalid input
             }
         } while (choice != 4); // Loop until user selects option 4 (Exit)
 
         scanner.close(); // Close scanner to prevent memory leaks
     }
+
 
     /**
      * Method to add a new task to the list.
@@ -88,6 +92,33 @@ public class ToDoListApp {
             System.out.println("Task removed."); // Confirmation message
         } else {
             System.out.println("Invalid task number."); // Handle invalid input
+        }
+    }
+
+    /**
+     * Method to search tasks by a keyword.
+     * @param scanner Scanner object for user input.
+     */
+    private static void searchTasks(Scanner scanner) {
+        System.out.print("Enter search term: ");
+        String searchTerm = scanner.nextLine().toLowerCase(); // Convert to lowercase for matching
+
+        boolean foundTask = false; // Found task set to false
+
+        System.out.println("\nSearch Results:");
+
+        // Search through each task
+        for (int i = 0; i < tasks.size(); i++) {
+            String task = tasks.get(i);
+            if (task.toLowerCase().contains(searchTerm)) {
+                System.out.println((i + 1) + ". " + task);
+                foundTask = true;
+            }
+        }
+
+        // Print out if no tasks found
+        if (!foundTask) {
+            System.out.println("No tasks found containing \"" + searchTerm + "\".");
         }
     }
 }

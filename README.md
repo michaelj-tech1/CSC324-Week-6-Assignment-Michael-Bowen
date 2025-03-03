@@ -1,33 +1,48 @@
 # CSC324-Week-6-Assignment
 
-# **Java To-Do List Application**
-
 ## **Overview**
 This is a simple **To-Do List application** built in **Java**. It allows users to:
-✅ **Add tasks**  
-✅ **View tasks**  
-✅ **Remove tasks**  
-✅ **Exit the application**  
-
-This project demonstrates **basic Java programming concepts**, including:
-- **ArrayLists** for storing tasks
-- **Loops** for handling user input
-- **Methods** for modular design
-- **Scanner class** for user input handling
-- **Switch statements** for menu selection
+- **Add tasks**  
+- **View tasks**  
+- **Remove tasks**
+- **Search tasks**   
+- **Exit the application**  
 
 ---
 
-## **Features**
-- **Add Task:** Users can enter a new task to be added to the list.
-- **View Tasks:** Displays all current tasks in the list.
-- **Remove Task:** Users can delete a task by specifying its number.
-- **Exit Program:** Safely exits the application.
+## **Feature Added**
+- **Search Task:** Users can search for a task that is saved.
 
 ---
 
-## **Installation & Setup**
-### **Prerequisites**
-Ensure you have the following installed on your system:
-- **Java Development Kit (JDK)** (Version 8 or later)
-- A **Java IDE** (Eclipse, IntelliJ IDEA, or VS Code) or a terminal with Java installed
+## **Sample Usage**
+**First add a task:** Select option 1 to add a task and it can be anything.
+
+--- To-Do List ---
+1. Add Task
+2. View Tasks
+3. Remove Task
+4. Search Tasks
+5. Exit
+Enter choice: 1
+Enter task: Go to the store on Monday
+Task added!
+
+**Second search for term:** Enter a term that is in the task you added like shown below.
+
+--- To-Do List ---
+1. Add Task
+2. View Tasks
+3. Remove Task
+4. Search Tasks
+5. Exit
+Enter choice: 4
+Enter search term: store
+
+Search Results:
+1. Go to the store on Monday
+
+---
+
+## **Author Information**
+- **Michael Bowen** 
